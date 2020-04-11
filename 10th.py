@@ -1,4 +1,5 @@
-from math import sqrt
+from math import sqrt 
+
 def simil():
     a1 = int(input('Enter the base of first triangle: '))
     a2 = int(input('Enter the base of first triangle: '))
@@ -60,7 +61,7 @@ def coord():
 def mess():
     print('Enter 1 for cube,2 for cubiod,3 for cylinder,4 for cone,5 for sphere and 6 for hemisphere')
     ip = input('Input: ')
-    pi = math.pi
+    pi = 3.1415926535
     if ip == '1':
         s = int(input('Enter side of cube: '))
         print('The volume of the cube is: ',s**3)
