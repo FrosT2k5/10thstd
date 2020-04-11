@@ -1,4 +1,4 @@
-import math
+from math import sqrt
 def simil():
     a1 = int(input('Enter the base of first triangle: '))
     a2 = int(input('Enter the base of first triangle: '))
