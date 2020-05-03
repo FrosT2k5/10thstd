@@ -1,6 +1,41 @@
-from math import sqrt 
+import math
+import os
+import sys
+import time
+from fractions import Fraction
 
+def clr():
+    time.sleep(0.2)
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
+      
+def help():
+    time.sleep(0.2)
+    f = open('files/help.txt')
+    help = f.read()
+    print(help)
+    f.close()
+    
+def trigo():
+    time.sleep(0.2)
+    ips = input('Enter sin,cos or tan: ')
+    thita = int(input('Enter value of angle(thita): '))
+    if ips == 'sin':
+        sint = math.sin(thita)
+        print('sin(',thita,') = ',sint)
+    elif ips == 'cos':
+        cost = math.cos(thita)
+        print('cos(',thita,') = ',cost)
+    elif ips == 'tan':
+        tant = math.tan(thita)
+        print('tan(',thita,') = ',tant)
+    else:
+        print('Please enter sin,cos or tan')
+        
 def simil():
+    time.sleep(0.2)
     a1 = int(input('Enter the base of first triangle: '))
     a2 = int(input('Enter the base of first triangle: '))
     b1 = int(input('Enter the base of first triangle: '))
@@ -9,12 +44,14 @@ def simil():
     print('The result is: ',c)
     
 def pytha():
+    time.sleep(0.2)
     s1 = float(input('Enter one side: '))
     s2 = float(input('Enter side two: '))
     hyp = sqrt((s1*s1)+(s2*s2))
     print('The value of hypotenuse is: ',hyp)
 
 def coord():
+    time.sleep(0.2)
     print('Enter 1 for distance formula,2 for section formula,3 for midpoint formula,4 for centroid formula')
     
     inp = input('Input: ')
@@ -27,6 +64,7 @@ def coord():
         
         print(x)
     elif inp == '2':
+        time.sleep(0.2)
         x1 = int(input('Enter X coordinate for first point: '))
         y1 = int(input('Enter Y coordinate for first point: '))
         x2 = int(input('Enter X coordinate for second point: '))
@@ -38,6 +76,7 @@ def coord():
         y = (m*y2+n*y1)/mod
         print('The coordinate of section point is: ''(',x,',',y,')')
     elif inp == '3':
+        time.sleep(0.2)
         x1 = int(input('Enter X coordinate for first point: '))
         y1 = int(input('Enter Y coordinate for first point: '))
         x2 = int(input('Enter X coordinate for second point: '))
@@ -59,6 +98,7 @@ def coord():
         print('Invalid option')
 
 def mess():
+    time.sleep(0.2)
     print('Enter 1 for cube,2 for cubiod,3 for cylinder,4 for cone,5 for sphere and 6 for hemisphere')
     ip = input('Input: ')
     pi = 3.1415926535
@@ -95,18 +135,30 @@ def mess():
         print('Invalid option')
         
 print('This program is only for 10th standard students')
-print('Enter:\n1.For similarity\n2.For pythagoras theorem\n3.Coordinate geometry\n4.For Mensuration\nMore will be added soon:)')
-minp = input('Enter the input: ')
-if minp == '1':
-    simil()
-elif minp == '2':
-    pytha()
-elif minp == '3':
-    coord()
-elif minp == '4':
-    mess()
-else:
-    print('Invalid option')
+print('Enter help for help menu')
+
+while True: 
+    minp = input('10thstd: ')
+    minp2 = minp.lower()
+    time.sleep(0.2)
+    if minp2 == 'simil' or minp2 == 'similarity':
+        simil()
+    elif minp2 == 'pythagoras' or minp2 == 'pytha':
+        pytha()
+    elif minp2 == 'coordinate' or minp2 =='coord':
+        coord()
+    elif minp2 == 'mensuration' or minp2 == 'mess' :
+        mess()
+    elif minp2 == 'help':
+        help()
+    elif minp2 == 'exit' or minp2 == 'quit':
+        sys.exit()
+    elif minp2 == 'trigo' or minp2 == 'trignometry':
+        trigo()
+    elif minp2 == 'clear' or minp2 == 'clr':
+        clr()
+    else:
+        print('Invalid option')
    
     
     

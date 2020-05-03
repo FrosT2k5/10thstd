@@ -1,0 +1,14 @@
+Welcome to 10th standard python code by FrosT 
+Enter the name of chapters u want
+Following chapters are available:
+
+simil or similarity for similarity
+pytha or pythagoras for pythagoras theorem
+coord or coordinate for coordinate geometry
+mess or mensuration for mensuration
+trigo or trignometry for trignometry
+exit or quit to exit
+clear or clr for clearing screen
+
+Thanks for using my program. Have Fun :)
+
