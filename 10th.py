@@ -37,10 +37,10 @@ def trigo():
         
 def simil():
     time.sleep(0.2)
-    a1 = int(input('Enter the base of first triangle: '))
-    a2 = int(input('Enter the height of first triangle: '))
-    b1 = int(input('Enter the base of second triangle: '))
-    b2 = int(input('Enter the height of second triangle: '))
+    a1 = float(input('Enter the base of first triangle: '))
+    a2 = float(input('Enter the height of first triangle: '))
+    b1 = float(input('Enter the base of second triangle: '))
+    b2 = float(input('Enter the height of second triangle: '))
     c = float(a1*a2)/float(b1*b2)
     print('The result is: ',c)
     
