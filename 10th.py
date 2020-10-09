@@ -21,7 +21,8 @@ def help():
     
 def trigo():
     time.sleep(0.2)
-    ips = input('Enter sin,cos or tan: ')
+    ipsb = input('Enter sin,cos or tan: ')
+    ips = ipsb.lower()
     thita = int(input('Enter value of angle(thita): '))
     if ips == 'sin':
         sint = math.sin(thita)
